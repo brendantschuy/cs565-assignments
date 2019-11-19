@@ -1,0 +1,41 @@
+body {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#container {
+    border-width: 1px;
+    width: 65%;
+    height: 625px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-gap: 5px;
+    grid-template-rows: 50% auto;
+}
+
+#container .cat-container {
+    display: grid;
+    padding: 5px;
+    grid-gap: 5px;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+}
+
+#code-example-text {
+    background: #555555;
+    padding: 10px;
+    color: white;
+}
+
+.code-example-api-call {
+    color: #dbebc3;
+    font-family: monospace, sans-serif;
+
+}
+
+h1 {
+    font: normal normal 4em Baskerville, Palatino, "Book Antiqua", serif;
+    color: lightslategray;
+}
