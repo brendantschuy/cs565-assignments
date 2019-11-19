@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+        }
+
+        .item {
+            padding: 10px;
+        }
+
+        .nested {
+            padding: 15px;
+            background-color: #333333;
+            border-radius: 2%;
+        }
+
+        .top, .bot {
+            height: 70px;
+        }
+
+        .mid {
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Layout #5: Flexbox</h1>
+    <div class="container">
+        <div class="item" style="flex-basis: 100%;">
+            <div class="nested top">One</div>
+        </div>
+        <div class="item" style="flex-grow: 1;">
+            <div class="nested mid">Two</div>
+        </div>
+        <div class="item" style="flex-grow: 4;">
+            <div class="nested mid">Three</div>
+        </div>
+        <div class="item" style="flex-basis: 100%;">
+            <div class="nested bot">Four</div>
+        </div>
+    </div>
+</body>
+
+</html>
