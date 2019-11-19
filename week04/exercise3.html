@@ -38,6 +38,12 @@
 
         console.log(`Name = ${name}\nEmail = ${email}\nComment = ${comment}`);
       };
+
+      reset = () => {
+        document.getElementById("nameInput").value = "";
+        document.getElementById("emailInput").value = "";
+        document.getElementById("comment").value = "";
+      }
     </script>
   </head>
 
@@ -71,7 +77,7 @@
       <button type="button" onclick="printInfo();" class="btn btn-primary">
         Submit
       </button>
-      <button type="button" class="btn btn-secondary">Reset</button>
+      <button type="button" onclick="reset();" class="btn btn-secondary">Reset</button>
     </form>
   </body>
 </html>
