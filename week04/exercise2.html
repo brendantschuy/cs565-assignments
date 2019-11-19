@@ -1,0 +1,26 @@
+<html>
+  <script>
+    getNumDigits = number => Math.max(Math.floor(Math.log10(Math.abs(number))), 0) + 1;
+
+    reverseNumString = number => number.toString().split("").reverse().join("");
+
+    reverseNumMath = number => {
+      let numDigits = getNumDigits(number);
+      let reversedNumber = 0;
+      for (let place = 0; place < numDigits; place++) {
+        let reversedPlace = numDigits - place - 1;
+        let columnDigit = number % Math.pow(10, place + 1) - number % Math.pow(10, place);
+        reversedNumber += columnDigit * Math.pow(10, reversedPlace - place);
+      }
+      return reversedNumber;
+    };
+
+
+    let input = 341459022;
+    console.log("input = " + input);
+    let reverse = reverseNumString(input);
+    console.log("reversed as string  = " + reverse);
+    reverse = reverseNumMath(input);
+    console.log("reversed as integer = " + reverse);
+  </script>
+</html>

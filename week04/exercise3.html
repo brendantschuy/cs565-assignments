@@ -30,6 +30,15 @@
         text-align: center;
       }
     </style>
+    <script>
+      printInfo = () => {
+        let name = document.getElementById("nameInput").value;
+        let email = document.getElementById("emailInput").value;
+        let comment = document.getElementById("comment").value;
+
+        console.log(`Name = ${name}\nEmail = ${email}\nComment = ${comment}`);
+      };
+    </script>
   </head>
 
   <body>
@@ -40,8 +49,8 @@
         <input
           type="name"
           class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
+          id="nameInput"
+          aria-describedby="nameHelp"
           placeholder=""
         />
       </div>
@@ -50,7 +59,7 @@
         <input
           type="email"
           class="form-control"
-          id="exampleInputEmail1"
+          id="emailInput"
           aria-describedby="emailHelp"
           placeholder=""
         />
@@ -59,8 +68,10 @@
         <label for="comment">Comment:</label>
         <textarea class="form-control" rows="5" id="comment"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="submit" class="btn btn-secondary">Reset</button>
+      <button type="button" onclick="printInfo();" class="btn btn-primary">
+        Submit
+      </button>
+      <button type="button" class="btn btn-secondary">Reset</button>
     </form>
   </body>
 </html>
