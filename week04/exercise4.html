@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script>
+      window.onresize = displayWindowSize;
+      window.onload = displayWindowSize;
+
+      function displayWindowSize() {
+        let {innerWidth: width, innerHeight: height} = window;
+        document.getElementById("windowDimensions").innerHTML =
+        width + "x" + height;
+      }
+    </script>
+  </head>
+  <body>
+    <span id="windowDimensions"></span>
+  </body>
+</html>
