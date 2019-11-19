@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #container {
+            border-width: 1px;
+            width: 65%;
+            height: 400px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+            color: white;
+        }
+
+        #container .item {
+            position: relative;
+        }
+
+        #container .item:last-child {
+            grid-column: 1 / 3;
+        }
+
+        .nested {
+            background-color: #555555;
+
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 2%;
+            padding: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="item">
+            <div class="nested">One</div>
+        </div>
+        <div class="item">
+            <div class="nested">Two</div>
+        </div>
+        <div class="item">
+            <div class="nested">Three</div>
+        </div>
+        <div class="item">
+            <div class="nested">Four</div>
+        </div>
+        <div class="item">
+            <div class="nested">Five</div>
+        </div>
+        <div class="item">
+            <div class="nested">Six</div>
+        </div>
+        <div class="item">
+            <div class="nested">Seven</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
