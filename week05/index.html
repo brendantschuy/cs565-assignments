@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <!--Bootstrap and jQuery CDNs-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <style>
+        form {
+            font-family: Helvetica, Arial, sans-serif;
+            width: 40%;
+            margin: auto;
+            border: solid #bbbbbb 1px;
+            padding: 1em;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        printInfo = () => {
+            let name = document.getElementById("nameInput").value;
+            let email = document.getElementById("emailInput").value;
+            let comment = document.getElementById("comment").value;
+
+            console.log(`Name = ${name}\nEmail = ${email}\nComment = ${comment}`);
+        };
+
+        reset = () => {
+            document.getElementById("nameInput").value = "";
+            document.getElementById("emailInput").value = "";
+            document.getElementById("comment").value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <form action="/submit" method="post" >
+        <h1>CONTACT US</h1>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input name="name" type="name" class="form-control" id="nameInput" value="abc" aria-describedby="nameHelp" placeholder="" />
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input name="email" type="email" class="form-control" id="emailInput" value="def" aria-describedby="emailHelp" placeholder="" />
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea name="comment" class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <button name="SubmitForm" type="submit" class="btn btn-primary">
+            Submit
+        </button>
+        <button type="button" onclick="reset();" class="btn btn-secondary">Reset</button>
+    </form>
+</body>
+
+</html>
